@@ -85,6 +85,7 @@ export async function updateInvoice(id: string, formData: FormData) {
   revalidatePath("/dashboard/invoices");
   redirect("/dashboard/invoices");
 }
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function deleteInvoice(id: string, formData: FormData) {
   try {
     await sql`DELETE FROM invoices WHERE id = ${id}`;
